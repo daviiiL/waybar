@@ -13,7 +13,6 @@
 window#waybar {
   color: @foreground;
   background: @background;
-
   padding: 5px;
 }
 
@@ -54,8 +53,8 @@ window#waybar {
   padding-right: 6px;
 }
 #battery.full {
-  background: blue;
-  color: white;
+  background: darkseagreen;
+  color: @background;
 }
 
 #battery.good {
