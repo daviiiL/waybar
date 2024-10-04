@@ -1,0 +1,116 @@
+@import url("./colors.css");
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: NotoSans, "FiraCode Nerd Font";
+  font-size: 16px;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0.5s;
+}
+
+window#waybar {
+  color: @foreground;
+  background: @background;
+
+  padding: 5px;
+}
+
+#workspaces {
+  margin: 0 5px;
+  color: @color1;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: @background;
+  border: 3px solid @background;
+  border-radius: 10px;
+  background: @color8;
+  transition: all 0.2s linear;
+}
+
+#workspaces button.visible {
+  color: @background;
+}
+
+#workspaces button.focused {
+  border: 3px solid @background;
+  border-radius: 10px;
+  background: @color1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#workspaces button.urgent {
+  color: rgba(238, 46, 36, 1);
+}
+
+#battery {
+  border-radius: 10px;
+  border: 5px solid @background;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#battery.full {
+  background: blue;
+  color: white;
+}
+
+#battery.good {
+  background: #abe9b3;
+  color: black;
+}
+
+#battery.warning {
+  background: orange;
+  color: black;
+}
+#battery.critical {
+  background: red;
+  color: white;
+}
+
+#mode {
+  background: @color2;
+  color: black;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 3px solid @background;
+  border-radius: 10px;
+}
+
+#backlight {
+  background: @color5;
+  color: @background;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 10px;
+  border: 5px solid @background;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-spotify,
+#custom-weather,
+#custom-mail {
+  margin: 0px 6px 0px 10px;
+  min-width: 25px;
+}
+
+#clock {
+  margin: 0px 16px 0px 10px;
+  min-width: 140px;
+  font-weight: bold;
+}

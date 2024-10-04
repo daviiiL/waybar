@@ -1,0 +1,88 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 34,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": [  "backlight", "pulseaudio", "network", "battery",  "clock"],
+    "sway/mode": {
+        "format": " {}",
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "format": "{title}",
+        "max-length": 20,
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "BAT {capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󱊡", "󱊢", "󱊢", "󱊢", "󱊣"],
+        "format-charging": "{capacity}%",
+        "interval": 30,
+        "states": {
+            "full": 100,
+            "good": 90,
+            "warning": 35,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["󰤟 ", "󰤢 ", "󰤥 " ,"󰤨 "],
+            "ethernet": [" "],
+            "disconnected": ["󰤭 "]
+        },
+        "on-click": "foot -e nmtui",
+    "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}% ",
+        "format-muted": "SOUND OFF",
+        "format-icons": {
+            "phone": ["  ", "  ", "   "],
+            "default": ["  ", "  ", "  "]
+        },
+        "scroll-step": 10,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+    },
+    "custom/storage": {
+        "format": "{} ",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
+    "backlight": {
+        "format": "BRT   {percent}% ",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-down": "light -A 1",
+        "on-scroll-up": "light -U 1"
+    },
+      "tray": {
+        "icon-size": 18
+    },
+    "custom/div": {
+      "format": " | "
+    },
+}
