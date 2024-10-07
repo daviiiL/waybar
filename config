@@ -4,7 +4,7 @@
     "height": 34,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": [  "backlight", "pulseaudio", "network", "battery",  "clock"],
+    "modules-right": [ "battery", "backlight", "pulseaudio", "network",  "clock"],
     "sway/mode": {
         "format": " {}",
     },
