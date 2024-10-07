@@ -3,7 +3,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: NotoSans, "FiraCode Nerd Font";
+  font-family: "Inter Variable";
   font-size: 16px;
   box-shadow: none;
   text-shadow: none;
@@ -67,7 +67,7 @@ window#waybar {
   color: black;
 }
 #battery.critical {
-  background: red;
+  background: #cf4b55;
   color: white;
 }
 

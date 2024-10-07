@@ -10,7 +10,19 @@
     },
     "sway/workspaces": {
         "format": "{name}",
-        "disable-scroll": true
+        "disable-scroll": true,
+        "persistent_workspaces":{
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": [],
+          "9": [],
+          "10": []
+        },
     },
     "sway/window": {
         "format": "{title}",
@@ -22,7 +34,7 @@
         "tooltip": false
     },
     "battery": {
-        "format": "BAT {capacity}% ",
+        "format": "BAT   {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": ["󱊡", "󱊢", "󱊢", "󱊢", "󱊣"],
         "format-charging": "{capacity}%",
@@ -74,7 +86,7 @@
         "exec": "~/.config/waybar/modules/storage.sh"
     },
     "backlight": {
-        "format": "BRT   {percent}% ",
+        "format": "BRT   {percent}%",
         "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
         "on-scroll-down": "light -A 1",
         "on-scroll-up": "light -U 1"
