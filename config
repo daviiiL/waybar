@@ -1,6 +1,6 @@
 {
     "layer": "bottom",
-    "position": "bottom",
+    "position": "top",
     "height": 34,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
@@ -37,7 +37,7 @@
         "format": "BAT   {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": ["󱊡", "󱊢", "󱊢", "󱊢", "󱊣"],
-        "format-charging": "{capacity}%",
+        "format-charging": "󰂄  {capacity}%",
         "interval": 30,
         "states": {
             "full": 100,

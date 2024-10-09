@@ -24,7 +24,7 @@ window#waybar {
 #workspaces button {
   padding: 0 5px;
   color: @background;
-  border: 3px solid @background;
+  border: 5px solid @background;
   border-radius: 10px;
   background: @color8;
   transition: all 0.2s linear;
