@@ -13,7 +13,7 @@
 window#waybar {
   color: @foreground;
   background: @background;
-  padding: 5px;
+  padding: 10px;
 }
 
 #workspaces {
@@ -47,15 +47,15 @@ window#waybar {
 }
 
 #battery {
-  border-radius: 10px;
-  border: 5px solid @background;
+  margin: 5px;
+  border-radius: 4px;
   padding-left: 6px;
   padding-right: 6px;
   transition: all 0.2s linear;
 }
 
 #battery:hover {
-  border: 1px solid @background;
+  margin: 1px;
   padding-right: 12px;
   padding-left: 12px;
   transition: all 0.2s linear;
@@ -93,32 +93,53 @@ window#waybar {
 }
 
 #backlight {
+  margin: 5px;
   background: @color2;
   color: @background;
   padding-left: 6px;
   padding-right: 6px;
-  border-radius: 10px;
-  border: 5px solid @background;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+#backlight:hover {
+  margin: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #mode,
-#battery,
 #cpu,
 #memory,
 #network,
 #pulseaudio,
 #idle_inhibitor,
-#backlight,
 #custom-storage,
 #custom-spotify,
 #custom-weather,
 #custom-mail {
-  margin: 0px 6px 0px 10px;
+  margin: 2px 6px 2px 10px;
   min-width: 25px;
+}
+#network,
+#pulseaudio {
+  margin: 2px;
+  padding-right: 5px;
+  transition: all 0.1s linear;
+}
+
+#network:hover,
+#clock:hover,
+#pulseaudio:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  transition: background 0.1s linear;
 }
 
 #clock {
-  margin: 0px 16px 0px 10px;
+  margin: 2px 16px 2px 16px;
+  padding: 0 5px 0 5px;
   min-width: 140px;
   font-weight: bold;
+  transition: all 0.1s linear;
 }
