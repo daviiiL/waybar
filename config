@@ -3,8 +3,8 @@
     "position": "top",
     "height": 34,
     "modules-left": ["sway/workspaces", "sway/mode",],
-    "modules-center": ["sway/window", "custom/ai"],
-    "modules-right": [ "battery", "backlight", "pulseaudio", "network",  "clock"],
+    "modules-center": ["sway/window", ],
+    "modules-right": [ "custom/ai","battery", "backlight", "pulseaudio", "network",  "clock"],
     "sway/mode": {
         "format": " {}",
     },

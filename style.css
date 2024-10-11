@@ -3,13 +3,9 @@
 @define-color color2 @primary_container;
 @define-color color8 @surface_bright;
 * {
-  border: none;
-  border-radius: 0;
   font-family: "Inter Variable";
   font-size: 16px;
-  box-shadow: none;
   text-shadow: none;
-  /*transition-duration: 0.5s;*/
 }
 
 window#waybar {
@@ -147,5 +143,5 @@ window#waybar {
 }
 
 #ai {
-  margin: 2px;
+  margin: 0 1rem 0 1rem;
 }
