@@ -1,5 +1,7 @@
 @import url("./colors.css");
 
+@define-color color2 @primary_container;
+@define-color color8 @surface_bright;
 * {
   border: none;
   border-radius: 0;
@@ -24,8 +26,8 @@ window#waybar {
 #workspaces button {
   padding: 0 5px;
   color: @background;
-  border: 5px solid @background;
-  border-radius: 10px;
+  margin: 5px;
+  border-radius: 0.2rem;
   background: @color8;
   transition: all 0.2s linear;
 }
@@ -35,8 +37,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  border: 3px solid @background;
-  border-radius: 10px;
+  margin: 3px;
+  border-radius: 0.4rem;
   background: @color2;
   padding-left: 20px;
   padding-right: 20px;
@@ -142,4 +144,8 @@ window#waybar {
   min-width: 140px;
   font-weight: bold;
   transition: all 0.1s linear;
+}
+
+#ai {
+  margin: 2px;
 }

@@ -2,8 +2,8 @@
     "layer": "bottom",
     "position": "top",
     "height": 34,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode",],
+    "modules-center": ["sway/window", "custom/ai"],
     "modules-right": [ "battery", "backlight", "pulseaudio", "network",  "clock"],
     "sway/mode": {
         "format": " {}",
@@ -17,6 +17,11 @@
         "3": "III",
         "4": "IV",
         "5": "V",
+        "6": "VI",
+        "7": "VII",
+        "8": "VIII",
+        "9": "IX",
+        "10": "X",
       },
       "sort-by-number": true,
       "disable-scroll": true,
@@ -75,29 +80,16 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
-    "custom/spotify": {
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "escape": true
-    },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
-    "backlight": {
+       "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
     },
       "tray": {
         "icon-size": 18
     },
-    "custom/div": {
-      "format": " | "
+    "custom/ai": {
+      "format": "<span color=\"#5e5e5e\">󱜸  </span>",
+      "on-click": "chromium gemini.google.com",
+      "tooltip": false
     },
 }
