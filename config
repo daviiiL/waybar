@@ -1,10 +1,10 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 34,
+    "height": 20,
     "modules-left": ["sway/workspaces", "sway/mode",],
     "modules-center": ["sway/window", ],
-    "modules-right": [ "custom/ai","battery", "backlight", "pulseaudio", "network",  "clock"],
+    "modules-right": [ "battery", "backlight", "pulseaudio", "network",  "clock"],
     "sway/mode": {
         "format": " {}",
     },
@@ -12,26 +12,11 @@
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "1": "I",
-        "2": "II",
-        "3": "III",
-        "4": "IV",
-        "5": "V",
-        "6": "VI",
-        "7": "VII",
-        "8": "VIII",
-        "9": "IX",
-        "10": "X",
-      },
+          "default": " ",
+          "focused": " ",
+        },
       "sort-by-number": true,
       "disable-scroll": true,
-      "persistent-workspaces": {
-        "1": ["eDP-1"],
-        "2": ["eDP-1"],
-        "3": ["eDP-1"],
-        "4": ["eDP-1"],
-        "5": ["eDP-1"],
-      }
     },
     "sway/window": {
         "format": "{title}",
@@ -67,10 +52,10 @@
             "disconnected": ["󰤭"]
         },
         "on-click": "foot -e nmtui",
-    "tooltip": false
+        "tooltip": false
     },
     "pulseaudio": {
-        "format": " {icon}   {volume}% ",
+        "format": " {icon} {volume}% ",
         "format-muted": "SOUND OFF",
         "format-icons": {
             "phone": ["  ", "  ", "   "],
@@ -80,16 +65,16 @@
         "on-click": "pavucontrol",
         "tooltip": false
     },
-       "backlight": {
-        "format": "{icon} {percent}%",
+    "backlight": {
+        "format": "{icon}  {percent}%",
         "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
     },
-      "tray": {
+    "tray": {
         "icon-size": 18
     },
     "custom/ai": {
       "format": "<span color=\"#5e5e5e\">󱜸  </span>",
-      "on-click": "chromium gemini.google.com",
+      "on-click": "firefox gemini.google.com",
       "tooltip": false
     },
 }

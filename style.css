@@ -1,63 +1,47 @@
-@import url("./colors.css");
-
-@define-color color2 @primary_container;
-@define-color color8 @surface_bright;
+@define-color background #11111b;
+@define-color foreground #cdd6f4;
+@define-color color2 #89b4fa;
+@define-color color8 #6c7086;
 * {
   font-family: "Inter Variable";
-  font-size: 16px;
   text-shadow: none;
 }
 
 window#waybar {
   color: @foreground;
   background: @background;
-  padding: 10px;
 }
-
 #workspaces {
-  margin: 0 5px;
-  color: @color2;
+  border-radius: 1rem;
+  margin: 5px;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  color: @background;
-  margin: 5px;
-  border-radius: 0.2rem;
-  background: @color8;
-  transition: all 0.2s linear;
-}
-
-#workspaces button.visible {
-  color: @background;
+  color: @color8;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
 #workspaces button.focused {
-  margin: 3px;
-  border-radius: 0.4rem;
-  background: @color2;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#workspaces button.urgent {
-  color: rgba(238, 46, 36, 1);
+  color: @color2;
+  border-radius: 1rem;
 }
 
 #battery {
-  margin: 5px;
+  /*margin: 5px;*/
   border-radius: 4px;
   padding-left: 6px;
   padding-right: 6px;
   transition: all 0.2s linear;
 }
 
-#battery:hover {
-  margin: 1px;
-  padding-right: 12px;
-  padding-left: 12px;
-  transition: all 0.2s linear;
-}
+/*#battery:hover {*/
+/*  margin: 1px;*/
+/*  padding-right: 12px;*/
+/*  padding-left: 12px;*/
+/*  transition: all 0.2s linear;*/
+/*}*/
 
 #battery.full {
   background: darkseagreen;
@@ -92,18 +76,12 @@ window#waybar {
 
 #backlight {
   margin: 5px;
-  background: @color2;
-  color: @background;
+  /*background: @color2;*/
+  /*color: @background;*/
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 4px;
   transition: all 0.2s linear;
-}
-
-#backlight:hover {
-  margin: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 #mode,
