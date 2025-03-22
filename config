@@ -2,7 +2,7 @@
     "layer": "bottom",
     "position": "bottom",
     "height": 34,
-    "output": "DP-2",
+    "output": "HDMI-A-3",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": [  "backlight", "pulseaudio", "network", "battery",  "clock"],

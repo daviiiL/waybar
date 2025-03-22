@@ -8,88 +8,96 @@
   box-shadow: none;
   text-shadow: none;
   transition-duration: 0.5s;
+  transition-property: background, border, padding, margin, width, height;
 }
 
 window#waybar {
-  color: @foreground;
-  background: @background;
+  color: @primary;
+  background: @surface_container_low;
   padding: 5px;
 }
 
 #workspaces {
   margin: 0 5px;
-  color: @color1;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: @background;
-  border: 3px solid @background;
+  color: @on_surface;
+  border: 3px solid @surface_container_low;
   border-radius: 10px;
-  background: @color8;
-  transition: all 0.2s linear;
+  background: @surface_container;
+  transition: background 0.2s linear, padding 0.2s linear, width 0.2s linear;
 }
 
 #workspaces button.visible {
-  color: @background;
+  color: @on_primary;
+  background: @primary_container;
+  transition-property: background, padding, width, height;
 }
 
 #workspaces button.focused {
-  border: 3px solid @background;
+  border: 3px solid @surface_container_low;
   border-radius: 10px;
-  background: @color1;
+  background: @primary;
+  color: @on_primary;
   padding-left: 20px;
   padding-right: 20px;
+  transition-property: background, padding, width, height;
 }
 
 #workspaces button.urgent {
-  color: rgba(238, 46, 36, 1);
+  color: @on_error;
+  background: @error;
+  transition-property: background, padding, width, height;
 }
 
 #battery {
   border-radius: 10px;
-  border: 5px solid @background;
+  border: 5px solid @surface_container_low;
   padding-left: 6px;
   padding-right: 6px;
 }
+
 #battery.full {
-  background: darkseagreen;
-  color: @background;
+  background: @tertiary_container;
+  color: @on_tertiary_container;
 }
 
 #battery.good {
-  background: #abe9b3;
-  color: black;
+  background: @secondary_container;
+  color: @on_secondary_container;
 }
 
 #battery.warning {
-  background: orange;
-  color: black;
+  background: @tertiary;
+  color: @on_tertiary;
 }
+
 #battery.critical {
-  background: red;
-  color: white;
+  background: @error;
+  color: @on_error;
 }
 
 #mode {
-  background: @color2;
-  color: black;
+  background: @secondary;
+  color: @on_secondary;
   font-size: 12pt;
   font-weight: bold;
   padding: 0;
   padding-left: 5px;
   padding-right: 5px;
-  border: 3px solid @background;
+  border: 3px solid @surface_container_low;
   border-radius: 10px;
 }
 
 #backlight {
-  background: @color5;
-  color: @background;
+  background: @tertiary_container;
+  color: @on_tertiary_container;
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 10px;
-  border: 5px solid @background;
+  border: 5px solid @surface_container_low;
 }
 
 #mode,
